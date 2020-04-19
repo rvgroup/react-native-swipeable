@@ -250,6 +250,7 @@ export default class Swipeable extends PureComponent {
     Animated.timing(pan, {
       toValue,
       duration: 250,
+      useNativeDriver: true,
       easing: Easing.elastic(0.5)
     }).start(() => this.recenter(swipeReleaseAnimationFn, swipeReleaseAnimationConfig, () => onDone && onDone()));
   };
